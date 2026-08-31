@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Memory hierarchy and array location</title>
+  <desc id="desc">A hierarchy from CPU registers to cache, main memory, and storage, showing that an array lives in main memory while currently used blocks may be copied into cache.</desc>
+  <defs><style>
+    text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:34px;font-weight:700}.sub{font-size:20px;fill:#526079}.label{font-size:25px;font-weight:700}.body{font-size:19px}.small{font-size:17px;fill:#526079}.box{stroke:#31415f;stroke-width:2}.arrow{stroke:#31415f;stroke-width:3;fill:none;marker-end:url(#a)}
+  </style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#31415f"/></marker></defs>
+  <rect width="1200" height="720" fill="#f7f9fc"/>
+  <text x="60" y="62" class="title">Memory hierarchy: where are the array and the cache?</text>
+  <text x="60" y="98" class="sub">Closer to the CPU → faster, smaller, and more expensive per byte</text>
+  <rect x="455" y="135" width="290" height="82" rx="12" fill="#e8e5ff" class="box"/>
+  <text x="600" y="169" text-anchor="middle" class="label">CPU registers</text><text x="600" y="197" text-anchor="middle" class="body">values used right now</text>
+  <rect x="370" y="257" width="460" height="105" rx="12" fill="#d9edff" class="box"/>
+  <text x="600" y="294" text-anchor="middle" class="label">CPU cache (L1 / L2 / L3)</text><text x="600" y="326" text-anchor="middle" class="body">copies of recently or nearby used memory blocks</text><text x="600" y="350" text-anchor="middle" class="small">cache lines</text>
+  <rect x="270" y="410" width="660" height="120" rx="12" fill="#dff3e5" class="box"/>
+  <text x="600" y="448" text-anchor="middle" class="label">Main memory (RAM)</text><text x="600" y="480" text-anchor="middle" class="body">The array's elements are stored here while the program runs.</text><text x="600" y="512" text-anchor="middle" class="body">Example: int[] numbers = {12, 7, 25, 4};</text>
+  <rect x="175" y="582" width="850" height="88" rx="12" fill="#fff0d7" class="box"/>
+  <text x="600" y="618" text-anchor="middle" class="label">Secondary storage (SSD / disk)</text><text x="600" y="649" text-anchor="middle" class="body">persistent files; much slower than RAM</text>
+  <path d="M600 217 V252" class="arrow"/><path d="M600 362 V405" class="arrow"/><path d="M600 530 V577" class="arrow"/>
+  <path d="M935 470 C1090 450 1080 315 837 311" class="arrow"/>
+  <text x="1005" y="402" text-anchor="middle" class="body">used blocks are copied</text><text x="1005" y="427" text-anchor="middle" class="body">from RAM to cache</text>
+</svg>
