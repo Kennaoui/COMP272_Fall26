@@ -17,7 +17,6 @@ methods marked `TODO` — and your work is checked automatically by
 - Run `Main.java` to test your work. It prints an `ERROR` line for each
   failing check and a running score out of 70. Part 4 (30 points) is
   graded separately, from your written answers.
-- Submit your completed files using the Assignments tab on Sakai.
 
 **Total: 100 points** (70 auto-tested + 30 written).
 
