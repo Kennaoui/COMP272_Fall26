@@ -1,67 +1,46 @@
 /**
- * SimpleList: a minimal List ADT for teaching purposes.
- * Represents an ordered collection of Generic elements, indexed from 0.
- * Implementations decide HOW the elements are stored (array, linked
- * nodes, etc.) — this interface only defines WHAT the list can do.
+ * SimpleList: the List ADT for Module 1, stated once for any element
+ * type T.
+ *
+ * It says WHAT an ordered, position-indexed collection can do; an
+ * implementing class decides HOW the elements are stored (a resizing
+ * array, linked nodes, ...). Client code depends only on this contract.
+ *
+ * T is a type parameter: the caller picks the element type at the point
+ * of use, e.g. SimpleList<String> or SimpleList<Integer>.
  */
 public interface SimpleList<T> {
-
-    // ----- Insertion -----
 
     /** Appends item to the end of the list. */
     void add(T item);
 
     /**
-     * Inserts item at the given index, shifting elements at and after
-     * index one position to the right.
+     * Inserts item so that it ends up at position index, shifting the
+     * element currently at index (and everything after it) one position
+     * later.
+     *
      * @throws IndexOutOfBoundsException if index < 0 or index > size()
      */
     void add(int index, T item);
 
-    // ----- Access -----
-
     /**
-     * Returns the element stored at index.
+     * Returns the element stored at position index.
+     *
      * @throws IndexOutOfBoundsException if index < 0 or index >= size()
      */
     T get(int index);
 
     /**
-     * Replaces the element at index with item and returns the value
-     * that was previously there.
-     * @throws IndexOutOfBoundsException if index < 0 or index >= size()
-     */
-    T set(int index, T item);
-
-    // ----- Removal -----
-
-    /**
-     * Removes and returns the element at index, shifting elements
-     * after index one position to the left.
+     * Removes the element at position index and returns it. Elements
+     * after index move one position earlier.
+     *
      * @throws IndexOutOfBoundsException if index < 0 or index >= size()
      */
     T remove(int index);
 
-    /**
-     * Removes the first occurrence of item from the list, if present.
-     * @return true if an element was removed, false if item was not found
-     */
-    boolean remove(T item);
-
-    /** Removes every element from the list. */
-    void clear();
-
-    // ----- Query -----
-
-    /** Returns true if item appears anywhere in the list. */
-    boolean contains(T item);
-
-    /** Returns the index of the first occurrence of item, or -1 if not found. */
-    int indexOf(T item);
-
-    /** Returns the number of elements currently stored. */
+    /** Returns how many elements are currently stored. */
     int size();
 
-    /** Returns true if the list contains no elements. */
+    /** Returns true if the list has no elements. */
     boolean isEmpty();
 }
