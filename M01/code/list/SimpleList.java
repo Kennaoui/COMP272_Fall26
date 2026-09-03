@@ -1,6 +1,6 @@
 /**
  * SimpleList: a minimal List ADT for teaching purposes.
- * Represents an ordered collection of String elements, indexed from 0.
+ * Represents an ordered collection of Generic elements, indexed from 0.
  * Implementations decide HOW the elements are stored (array, linked
  * nodes, etc.) — this interface only defines WHAT the list can do.
  */
