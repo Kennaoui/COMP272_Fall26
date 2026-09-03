@@ -1,4 +1,4 @@
-package comp272.demo;
+package intro_java.demo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
