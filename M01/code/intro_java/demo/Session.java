@@ -1,4 +1,4 @@
-package basics.demo;
+package intro_java.demo;
 
 import java.util.Objects;
 
