@@ -4,19 +4,19 @@
  * Implementations decide HOW the elements are stored (array, linked
  * nodes, etc.) — this interface only defines WHAT the list can do.
  */
-public interface SimpleList {
+public interface SimpleList<T> {
 
     // ----- Insertion -----
 
     /** Appends item to the end of the list. */
-    void add(String item);
+    void add(T item);
 
     /**
      * Inserts item at the given index, shifting elements at and after
      * index one position to the right.
      * @throws IndexOutOfBoundsException if index < 0 or index > size()
      */
-    void add(int index, String item);
+    void add(int index, T item);
 
     // ----- Access -----
 
@@ -24,14 +24,14 @@ public interface SimpleList {
      * Returns the element stored at index.
      * @throws IndexOutOfBoundsException if index < 0 or index >= size()
      */
-    String get(int index);
+    T get(int index);
 
     /**
      * Replaces the element at index with item and returns the value
      * that was previously there.
      * @throws IndexOutOfBoundsException if index < 0 or index >= size()
      */
-    String set(int index, String item);
+    T set(int index, T item);
 
     // ----- Removal -----
 
@@ -40,13 +40,13 @@ public interface SimpleList {
      * after index one position to the left.
      * @throws IndexOutOfBoundsException if index < 0 or index >= size()
      */
-    String remove(int index);
+    T remove(int index);
 
     /**
      * Removes the first occurrence of item from the list, if present.
      * @return true if an element was removed, false if item was not found
      */
-    boolean remove(String item);
+    boolean remove(T item);
 
     /** Removes every element from the list. */
     void clear();
@@ -54,10 +54,10 @@ public interface SimpleList {
     // ----- Query -----
 
     /** Returns true if item appears anywhere in the list. */
-    boolean contains(String item);
+    boolean contains(T item);
 
     /** Returns the index of the first occurrence of item, or -1 if not found. */
-    int indexOf(String item);
+    int indexOf(T item);
 
     /** Returns the number of elements currently stored. */
     int size();
