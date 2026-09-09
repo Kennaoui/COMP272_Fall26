@@ -27,9 +27,12 @@ java -cp out app.AccessLab
 
 Note: -cp out tells java to search inside the out directory for the compiled classes and packages needed to run the program.
 
+
 Test => make the requested change, uncomment the indicated call, compile, and run if compilation succeeds.
+---------------
 
 Record: Does it compile? If it compiles, does it run? What do you conclude?
+---------------
 
 ## A — Same class
 
