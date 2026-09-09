@@ -16,11 +16,16 @@ Compile:
 javac -d out src/devices/Device.java src/app/AccessLab.java
 ```
 
+Note: \'-d out tells\' javac to place the compiled .class files in the out directory, creating the appropriate package folders inside it.
+      out is the directory chosen to store the compiled .class files.
+
 Run:
 
 ```bash
 java -cp out app.AccessLab
 ```
+
+Note: -cp out tells java to search inside the out directory for the compiled classes and packages needed to run the program.
 
 Test => make the requested change, uncomment the indicated call, compile, and run if compilation succeeds.
 
