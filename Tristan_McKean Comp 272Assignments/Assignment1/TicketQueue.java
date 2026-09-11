@@ -59,8 +59,12 @@ public class TicketQueue {
      * throwing, so check isEmpty() yourself before deciding what to do.
      */
     public String serveNext() {
-        // TODO: implement
-        return null; // replace this line
+      if (waiting.isEmpty()) {
+        throw new NoSuchElementException("No customers waiting");
+      }
+      String serving = waiting.poll();
+      servedCount = servedCount + 1;
+      return serving;
     }
 
     /**
@@ -74,7 +78,12 @@ public class TicketQueue {
      * Reading the queue this way does not remove anything from it.
      */
     public boolean isCustomerWaiting(String customerId) {
-        // TODO: implement
-        return false; // replace this line
+       for (String id : waiting) {
+        if (id.equals(customerId)) {
+            return true;
+        }
+       }
+       return false;
     }
 }
+ // replace this line
