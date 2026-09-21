@@ -64,7 +64,12 @@ public class RangeSumExperiment {
      * inside the measured interval.
      */
     public static long timeDirectOnce(int[] values, int[][] queries) {
-        return 0;
+        long start = System.nanoTime();
+        long[] answers = answerDirectly(values, queries);
+        long elapsed = System.nanoTime() - start;
+        resultSink = answers[0];
+
+        return elapsed;
     }
 
     /**
@@ -75,7 +80,12 @@ public class RangeSumExperiment {
      * inside the measured interval.
      */
     public static long timePrefixOnce(int[] values, int[][] queries) {
-        return 0;
+        long start = System.nanoTime();
+        long[] answers = answerWithPrefixSums(values, queries);
+        long elapsed = System.nanoTime() - start;
+        resultSink = answers[0];
+
+        return elapsed;
     }
 
     /**
@@ -86,7 +96,14 @@ public class RangeSumExperiment {
      */
     public static long averageDirectTime(
             int[] values, int[][] queries, int repetitions) {
-        return 0;
+        long total = 0;
+        for (int run = 0; run < repetitions; run++) {
+            long start = System.nanoTime();
+            long[] answers = answerDirectly(values, queries);
+            total += System.nanoTime() - start;
+            resultSink = answers[0];
+        }
+        return total / repetitions;
     }
 
     /**
@@ -97,7 +114,14 @@ public class RangeSumExperiment {
      */
     public static long averagePrefixTime(
             int[] values, int[][] queries, int repetitions) {
-        return 0;
+        long total = 0;
+        for (int run = 0; run < repetitions; run++) {
+            long start = System.nanoTime();
+            long[] answers = answerWithPrefixSums(values, queries);
+            total += System.nanoTime() - start;
+            resultSink = answers[0];
+        }
+        return total / repetitions;
     }
 
     /**
