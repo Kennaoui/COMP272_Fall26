@@ -5,7 +5,6 @@ import java.util.Arrays;
  *
  * Solution key: the four timing methods below are the completed versions of
  * the TODOs in the starter file. The two range-query algorithms and the
- * input-generation methods are unchanged from the starter.
  */
 public class RangeSumExperiment {
 
