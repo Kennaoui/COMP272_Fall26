@@ -1,0 +1,80 @@
+import java.util.ArrayDeque;
+import java.util.NoSuchElementException;
+import java.util.Queue;
+
+/**
+ * TicketQueue: a small "who's next" line for a customer-service desk.
+ *
+ * Customers are served in the order they arrive -- first in, first out
+ * (FIFO). This class is backed by java.util.ArrayDeque, used through the
+ * Queue interface: offer() adds at the back, poll() removes and returns
+ * the front, peek() looks at the front without removing it.
+ *
+ * Notice what this class does NOT offer: there is no get(index), no way
+ * to reach directly into the middle of the line. That is deliberate -- a
+ * Queue ADT only promises FIFO access at the two ends, unlike the
+ * SequenceList from Part 1, which promises indexed access everywhere.
+ */
+public class TicketQueue {
+
+    private Queue<String> waiting;
+    private int servedCount;
+
+    public TicketQueue() {
+        waiting = new ArrayDeque<>();
+        servedCount = 0;
+    }
+
+    /** Adds a customer to the back of the line. */
+    public void addCustomer(String customerId) {
+        waiting.offer(customerId);
+    }
+
+    /** Returns the customer at the front without removing them, or null if empty. */
+    public String peekNext() {
+        return waiting.peek();
+    }
+
+    public int size() {
+        return waiting.size();
+    }
+
+    public boolean isEmpty() {
+        return waiting.isEmpty();
+    }
+
+    /** How many customers this queue has served so far via serveNext(). */
+    public int getServedCount() {
+        return servedCount;
+    }
+
+    /**
+     * Removes and returns the customer at the front of the line, and
+     * increases servedCount by one. Throws NoSuchElementException if the
+     * queue is empty -- Queue's poll() would otherwise just return null,
+     * so isEmpty() must be checked first.
+     */
+    public String serveNext() {
+        if (waiting.isEmpty()) {
+            throw new NoSuchElementException("No customers waiting");
+        }
+        String customer = waiting.poll();
+        servedCount++;
+        return customer;
+    }
+
+    /**
+     * Returns true if customerId is anywhere in the line (not only at
+     * the front), without removing anyone or changing the order of the
+     * line. Queue extends Iterable, so an enhanced for-loop can visit
+     * every element without disturbing it.
+     */
+    public boolean isCustomerWaiting(String customerId) {
+        for (String id : waiting) {
+            if (id.equals(customerId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
