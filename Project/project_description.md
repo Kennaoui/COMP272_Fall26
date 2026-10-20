@@ -140,7 +140,7 @@ Your targets do not have to be perfect. They must be **reasonable**, **justified
 
 > **Concept — Version control with Git**
 >
-> As a team, you will edit the same code. Use a Git repository (e.g. a **private** GitHub or GitLab repository) so that every change is recorded, you can merge each other's work, and you can go back to a version that worked. Commit small changes often, with clear messages. Your instructor may ask to see the commit history.
+> As a team, you will edit the same code. I propose you use a Git repository (e.g. a **private** GitHub or GitLab repository) so that every change is recorded, you can merge each other's work, and you can go back to a version that worked. Commit small changes often, with clear messages. Your instructor may ask to see the commit history.
 >
 > *Reference:* S. Chacon and B. Straub, [*Pro Git*](https://git-scm.com/book/en/v2), 2nd ed. — free online. Chapters 1–3 are enough for this project.
 
