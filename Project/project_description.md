@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Duration** | 6 weeks: Week 10 to Week 15 |
+| **Duration** | Week 9 to Week 15 |
 | **Teams** | 2–3 students |
 | **Language** | Java 17 or later |
 | **Starter code** | Provided for each proposed application: interface, two solution skeletons, dataset reader skeleton, JUnit tests |
