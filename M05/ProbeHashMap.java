@@ -32,13 +32,6 @@ public class ProbeHashMap<K, V> {
         return null;
     }
 
-    public V remove(K key) {
-        int i = find(key);
-        if (i < 0) return null;
-        V old = (V) vals[i];
-        keys[i] = AVAILABLE; vals[i] = null; n--;               // mark, don't empty
-        return old;
-    }
 
     public String dump() {
         StringBuilder sb = new StringBuilder();
