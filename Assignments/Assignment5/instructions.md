@@ -47,7 +47,7 @@ public static ArrayList<Integer> odd(HashMap<Integer, Integer> map)
 
 Return the values associated with odd keys, including negative odd keys. Include one value per qualifying key; the order does not matter. Return an empty list if there are no odd keys.
 
-### Q3. `twoSums` (25 points)
+### Q3. `twoSums` (20 points)
 
 ```java
 public static int twoSums(int[] numbers, int k)
@@ -59,7 +59,7 @@ For example, `[1, 1, 3, 5]` with `k = 2` gives **2** pairs: `(1, 3)` and `(3, 5)
 
 Use a `HashMap` or `HashSet` to achieve **expected O(n) time**. Briefly explain your approach, time complexity, and auxiliary space complexity in a comment. You may assume integer arithmetic does not overflow.
 
-### Testing
+### Testing (5 points)
 
 Add a `main` method that tests all three methods, including relevant edge cases. Clearly show expected and actual results.
 
