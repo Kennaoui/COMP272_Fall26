@@ -27,8 +27,8 @@ public class DesignAnalysis {
      */
     public static int addWithoutTailCost() {
         // Justification:
-        // (write your reasoning here)
-        return -1; // replace with the correct option number
+        // The answer is 3, because it is O(n). This is because in linkedlist, when you add something it is added to the last node, or node (n), and it takes n amount of time to reach there. 
+        return 3; 
     }
 
     /**
@@ -43,8 +43,8 @@ public class DesignAnalysis {
      */
     public static int addWithTailCost() {
         // Justification:
-        // (write your reasoning here)
-        return -1; // replace with the correct option number
+        // The answer is O(1) because a tail reference has access to the last node already. It does not need to progress through all of the nodes.
+        return 1; 
     }
 
     /**
@@ -66,6 +66,9 @@ public class DesignAnalysis {
         // workload, and say what a plain ArrayDeque-based queue gives
         // up once "cancel a request from the middle" is added as a
         // requirement.
-        return -1; // replace with the correct option number
+
+        // The operation is a queue, because requests are matched in order, but can still be cancelled out of order. (FIFO)
+        // A plain ArrayDeque-based queue gives up O(1) because even though it can instantly access the head or tail, it has to search through the middle, which costs O(n)
+        return 3; 
     }
 }
