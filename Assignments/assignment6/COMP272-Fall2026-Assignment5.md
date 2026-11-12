@@ -1,19 +1,16 @@
-# COMP 272: Data Structures II — Assignment 5
+# COMP 272: Data Structures II — Assignment 6
 
 **Loyola University Chicago · Department of Computer Science · Fall 2026**
 
 This is an individual assignment.
 
-**Deadline:** _TBA_
-
 ---
 
 ## Submission
 
-1. Submit your work electronically through your assigned assignment in the Sakai **Assignments** tab.
-2. **Do not modify `Main.java`** in your submitted version.
-3. Before you submit, make sure your **code passes all the supplied tests**. Keep in mind that passing the tests does not guarantee that your code is correct or efficient. Your assignment will be graded on test results, correctness, and efficiency.
-4. Include your **name and section number** as a comment at the top of `ProblemSolutions.java`, `BloomFilter.java`, and `CuckooHash.java`.
+1. **Do not modify `Main.java`** in your submitted version.
+2. Before you submit, make sure your **code passes all the supplied tests**. Keep in mind that passing the tests does not guarantee that your code is correct or efficient. Your assignment will be graded on test results, correctness, and efficiency.
+3. Include your **name** as a comment at the top of `ProblemSolutions.java`, `BloomFilter.java`, and `CuckooHash.java`.
 
 ---
 
