@@ -10,6 +10,21 @@ public class ArithmeticExpression {
     }
 
     private String toExpressionString(BinaryTree.Node<String> node) {
+    private String toExpressionString(BinaryTree.Node<String> node) {
+    String result;
+    if (node == null) {
+        result = "";
+    }
+    else if (node.getLeft() == null && node.getRight() == null) {
+        result = node.getElement();
+    }
+    else {
+        String left = toExpressionString(node.getLeft());
+        String right = toExpressionString(node.getRight());
+        result = "(" + left + " " + node.getElement() + " " + right + ")";
+    }
+    return result;
+}
         String result;
         if (node == null) {
             result = "";
@@ -23,6 +38,7 @@ public class ArithmeticExpression {
             result =  "(" + left + " " + node.getElement() + " " + right + ")";
         }
         return result;
+>>>>>>> 9209d5b244c2c3825227d930658aa988d454c48e
     }
 
     public static void main(String[] args) {

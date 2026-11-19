@@ -1,0 +1,10 @@
+{
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable",
+    "java.project.sourcePaths": [
+        "Tristan_McKean Comp 272Assignments/Assignment4",
+        "Tristan_McKean Comp 272Assignments/Assignment3",
+        "Tristan_McKean Comp 272Assignments/Assignment1",
+        "Group Project (Actual One)/app-b-movies/src/main/java/movies",
+        "Tristan_McKean Comp 272Assignments/Assignment5"
+    ]
+}
